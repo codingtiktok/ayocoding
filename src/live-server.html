@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Live Server</title>
+		<style>
+			div {
+				background: linear-gradient(to right, rgb(243, 135, 135), rgb(133, 253, 133));
+				background-clip: border-box;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				cursor: pointer;
+			}
+
+			.hide {
+				opacity: 50%;
+			}
+
+			.show:hover {
+				opacity: 100%;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="font-semibold flex" id="title"></div>
+	</body>
+	<script>
+		const title = document.getElementById("title");
+
+		const content = "Tutorial Live Server".split("");
+		content.forEach((char) => {
+			const span = document.createElement("span");
+			const textNode = document.createTextNode(char === " " ? "_" : char);
+			span.classList = char === " " ? "opacity-0" : "hover:-mt-1 transition-all hide show";
+
+			span.appendChild(textNode);
+			title.appendChild(span);
+		});
+	</script>
+</html>
