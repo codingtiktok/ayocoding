@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Instagram Story</title>
+		<style>
+			.animate-rotate {
+				animation: rotate 2s linear infinite;
+				transform: rotate(0deg);
+			}
+
+			@keyframes rotate {
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="w-12 h-12 group relative">
+			<div
+				class="absolute w-full h-full bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-0.5 rounded-full animate-rotate transition"
+			></div>
+
+			<div class="absolute inset-0 m-0.5 w-[2.75rem] h-[2.75rem] rounded-full overflow-hidden">
+				<img
+					src="/src/img/profile.jpg"
+					alt="profile"
+					class="w-full h-full object-cover group-hover:scale-110 transition"
+				/>
+			</div>
+		</div>
+	</body>
+</html>
