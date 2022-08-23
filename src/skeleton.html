@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Skeleton</title>
+		<style>
+			.animate-shimmer::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent, rgba(255, 255, 255, 0.2));
+				transform: translateX(-100%);
+				animation: animate 2s infinite;
+			}
+
+			@keyframes animate {
+				100% {
+					transform: translateX(100%);
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="flex gap-2">
+			<div class="rounded-full w-8 h-8 bg-slate-400 animate-shimmer overflow-hidden relative"></div>
+			<div class="flex flex-col gap-1">
+				<div class="w-16 h-2 rounded-lg bg-slate-400 animate-shimmer overflow-hidden relative"></div>
+				<div class="w-20 h-2 rounded-lg bg-slate-400 animate-shimmer overflow-hidden relative"></div>
+				<div class="w-12 h-2 rounded-lg bg-slate-400 animate-shimmer overflow-hidden relative"></div>
+			</div>
+		</div>
+	</body>
+</html>
