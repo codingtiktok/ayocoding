@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Glowing Button</title>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<button class="text-white bg-slate-300 px-4 py-2 rounded-lg relative group">
+			<div
+				class="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-400 to-purple-400 -z-10 group-hover:opacity-100 opacity-50 transition duration-500 group-hover:duration-200 filter blur-sm"
+			></div>
+			<div class="w-8 h-1 rounded-lg bg-slate-400 mb-1"></div>
+			<div class="w-12 h-1 rounded-lg bg-slate-400"></div>
+		</button>
+	</body>
+</html>
