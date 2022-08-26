@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Smooth Scroll</title>
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800">
+		<div class="flex gap-4 fixed top-16 justify-center w-full">
+			<a class="rounded-lg px-8 py-4 bg-gray-800" href="#gray"></a>
+			<a class="rounded-lg px-8 py-4 bg-green-500" href="#green"></a>
+			<a class="rounded-lg px-8 py-4 bg-yellow-500" href="#yellow"></a>
+			<a class="rounded-lg px-8 py-4 bg-blue-500" href="#blue"></a>
+		</div>
+		<div class="bg-transparent w-screen h-screen" id="gray"></div>
+		<div class="bg-green-500 w-screen h-screen" id="green"></div>
+		<div class="bg-yellow-500 w-screen h-screen" id="yellow"></div>
+		<div class="bg-blue-500 w-screen h-screen" id="blue"></div>
+	</body>
+</html>
