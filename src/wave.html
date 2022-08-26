@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Wave</title>
+		<style>
+			.animate-wave {
+				animation: wave 3s infinite;
+				transform-origin: 70% 70%;
+			}
+
+			@keyframes wave {
+				0% {
+					transform: rotate(0deg);
+				}
+				10% {
+					transform: rotate(14deg);
+				}
+				20% {
+					transform: rotate(-8deg);
+				}
+				30% {
+					transform: rotate(14deg);
+				}
+				40% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="animate-wave text-4xl">👋</div>
+	</body>
+</html>
