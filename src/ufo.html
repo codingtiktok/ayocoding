@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Three UFOs</title>
+		<style>
+			.animate-bounce {
+				animation: 2s bounce infinite alternate;
+			}
+
+			@keyframes bounce {
+				50% {
+					transform: translate(0.2rem, -0.2rem) rotate(-25deg);
+				}
+				100% {
+					transform: translate(-0.1rem, 0.5rem);
+				}
+			}
+
+			.delay-1 {
+				animation-delay: 0.3s;
+			}
+
+			.delay-2 {
+				animation-delay: 0.5s;
+			}
+
+			.delay-3 {
+				animation-delay: 0.7s;
+			}
+		</style>
+	</head>
+	<body class="h-screen flex items-center justify-center bg-gray-800">
+		<div class="relative rounded-full animate-bounce translate-y-6 delay-2">🛸</div>
+		<div class="relative rounded-full animate-bounce translate-y-4 delay-1">🛸</div>
+		<div class="relative rounded-full animate-bounce translate-y-8 delay-3">🛸</div>
+	</body>
+</html>
