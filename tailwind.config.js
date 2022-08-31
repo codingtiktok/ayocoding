@@ -6,6 +6,9 @@ module.exports = {
 			boxShadow: {
 				b: "0 4px 0",
 			},
+			fontFamily: {
+				sans: ["Poppins", "sans-serif"],
+			},
 		},
 	},
 	plugins: [],
