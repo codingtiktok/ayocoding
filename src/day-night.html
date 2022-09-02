@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Day Night</title>
+		<style>
+			.container {
+				width: 24px;
+				height: 24px;
+				overflow: hidden;
+			}
+
+			.animate-flipbook {
+				animation: flipbook 2.5s steps(12) infinite;
+			}
+
+			@keyframes flipbook {
+				100% {
+					transform: translateY(-288px);
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="container">
+			<div class="animate-flipbook">
+				<div>🌑</div>
+				<div>🌒</div>
+				<div>🌓</div>
+				<div>🌔</div>
+				<div>🌕</div>
+				<div>🌖</div>
+				<div>🌗</div>
+				<div>🌘</div>
+				<div>🌚</div>
+				<div>🌚</div>
+				<div>🌚</div>
+				<div>🌚</div>
+			</div>
+		</div>
+	</body>
+</html>
