@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Instagram Music</title>
+		<style>
+			.animate-music-1 {
+				animation: music-1 1s infinite;
+			}
+
+			@keyframes music-1 {
+				50% {
+					height: 1.5rem;
+				}
+			}
+
+			.animate-music-2 {
+				animation: music-2 1s infinite;
+			}
+
+			@keyframes music-2 {
+				50% {
+					height: 1rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="flex items-center gap-2 pl-1 pr-4 py-1 bg-white rounded-md">
+			<div class="w-12 h-12 rounded-md overflow-hidden bg-slate-300 relative flex items-center justify-center">
+				<img src="/src/img/trap-queen.jpg" alt="Trap Queen" />
+				<div class="flex gap-1 items-center absolute z-10 opacity-80">
+					<div class="w-1 h-6 animate-music-2 bg-white rounded-md"></div>
+					<div class="w-1 h-4 animate-music-1 bg-white rounded-md"></div>
+					<div class="w-1 h-6 animate-music-2 bg-white rounded-md"></div>
+				</div>
+			</div>
+			<div class="flex flex-col">
+				<h1 class="text-sm font-bold">Trap Queen (Remix)</h1>
+				<span class="text-sm">Fetty Wap</span>
+			</div>
+		</div>
+	</body>
+</html>
