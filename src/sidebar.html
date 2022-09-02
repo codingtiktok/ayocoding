@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Sidebar</title>
+		<style>
+			.fade-in {
+				animation: fadeIn 0.5s;
+				animation-fill-mode: both;
+			}
+
+			@keyframes fadeIn {
+				0% {
+					transform: translateX(-1rem);
+					opacity: 0;
+				}
+				100% {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+			.delay-1 {
+				animation-delay: 0.1s;
+			}
+
+			.delay-2 {
+				animation-delay: 0.2s;
+			}
+
+			.delay-3 {
+				animation-delay: 0.3s;
+			}
+
+			.delay-4 {
+				animation-delay: 0.4s;
+			}
+
+			.delay-5 {
+				animation-delay: 0.5s;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="">
+			<div class="relative w-12 h-12">
+				<div class="absolute bg-blue-300 text-gray-800 rounded-md w-full h-full flex items-center justify-center">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</div>
+				<input type="checkbox" class="absolute w-full h-full opacity-0 peer z-10 cursor-pointer" />
+
+				<div class="absolute left-[150%] hidden peer-checked:block">
+					<ul class="flex flex-col gap-2">
+						<li>
+							<div class="w-24 h-8 rounded-md bg-blue-300 fade-in delay-1 delay-1"></div>
+						</li>
+						<li>
+							<div class="w-24 h-8 rounded-md bg-red-300 fade-in delay-2"></div>
+						</li>
+						<li>
+							<div class="w-24 h-8 rounded-md bg-green-300 fade-in delay-3"></div>
+						</li>
+						<li>
+							<div class="w-24 h-8 rounded-md bg-pink-300 fade-in delay-4"></div>
+						</li>
+						<li>
+							<div class="w-24 h-8 rounded-md bg-violet-300 fade-in delay-5"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
