@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Youtube</title>
+		<style>
+			.triangle {
+				border-bottom: 24px solid #fff;
+				border-right: 12px solid transparent;
+				border-left: 12px solid transparent;
+				transform: rotate(90deg);
+				margin-left: 4px;
+			}
+
+			.animate-youtube {
+				animation: youtube 1s;
+				animation-delay: 0.5s;
+				animation-fill-mode: both;
+			}
+
+			@keyframes youtube {
+				0% {
+					transform: translateY(100%);
+					opacity: 0;
+				}
+			}
+
+			.animate-triangle {
+				animation: triangle 0.5s;
+				animation-delay: 1.5s;
+				animation-fill-mode: both;
+			}
+
+			@keyframes triangle {
+				0% {
+					transform: translateX(-100%) rotate(90deg);
+					opacity: 0;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="bg-red-600 w-24 h-16 rounded-xl relative grid place-items-center animate-youtube">
+			<div class="triangle animate-triangle"></div>
+		</div>
+	</body>
+</html>
