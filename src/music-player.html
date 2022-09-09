@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Music Player</title>
+		<style>
+			.animate-spin {
+				animation: spin 30s linear infinite;
+			}
+			@keyframes spin {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div class="relative">
+			<div class="absolute inset-0 bg-gradient-to-br from-purple-700 to-pink-700 -z-10 rounded-sm blur-lg"></div>
+
+			<div class="p-16 rounded-md bg-white/30 backdrop-blur-sm">
+				<div class="flex flex-col items-center mb-8">
+					<span class="font-bold text-xl text-white">Whistle</span>
+					<span class="text-white">Blackpink</span>
+				</div>
+
+				<div class="w-32 h-32 ring-2 ring-black ring-offset-4 ring-offset-pink-300 rounded-full mb-8">
+					<div class="w-32 h-32 rounded-full overflow-hidden animate-spin">
+						<img src="https://i1.sndcdn.com/artworks-000471880710-tcp1ug-t500x500.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="flex gap-4 justify-center cursor-pointer text-white">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6 stroke-2 hover:opacity-80 transition"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M21 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953l7.108-4.062A1.125 1.125 0 0121 8.688v8.123zM11.25 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953L9.567 7.71a1.125 1.125 0 011.683.977v8.123z"
+						/>
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor "
+						class="w-6 h-6 stroke-2 hover:opacity-80 transition"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+					</svg>
+
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6 stroke-2 hover:opacity-80 transition"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"
+						/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
