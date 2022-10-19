@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<title>Popup</title>
+		<style>
+			.show {
+				display: flex;
+				animation: fade 3s;
+			}
+
+			@keyframes fade {
+				0%,
+				100% {
+					top: -1rem;
+					opacity: 0;
+				}
+				20%,
+				80% {
+					top: 1rem;
+					opacity: 100;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-800 flex items-center justify-center h-screen">
+		<div
+			id="notification"
+			class="absolute top-4 left-1/2 -translate-x-1/2 px-2 pt-2 pb-3 gap-2 bg-white rounded-lg ring-2 ring-offset-4 ring-offset-gray-800 ring-pink-200 hidden"
+		>
+			<div class="rounded-full w-12 h-12 ring-2 ring-pink-300 ring-offset-2 ring-offset-white overflow-hidden">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuY2DJcG59ldlY-7RVm3fJuH3pK-uOSznmu6LBc_L6&s"
+					alt=""
+				/>
+			</div>
+
+			<div class="flex flex-col justify-center ml-1">
+				<div class="flex justify-between">
+					<span class="text-sm">Ayangg 💕</span>
+					<span class="text-[0.7rem] text-gray-500">1 min</span>
+				</div>
+				<p id="message" class="text-xs text-gray-700 w-[200px]">Tes 123 :D</p>
+			</div>
+		</div>
+		<button
+			class="bg-white px-4 py-2 rounded-lg shadow-slate-300 shadow-b active:translate-y-[4px] active:shadow-none transition-all"
+			onclick="panggilAyang()"
+		>
+			Panggil ayangg 💕
+		</button>
+	</body>
+	<script>
+		const messages = ["Pagi sayangg~~", "Ketemuan yuk! Aku kangen 😗", "See u later sayangg 💕"];
+
+		let current = 0;
+
+		const messageText = document.getElementById("message");
+		const notification = document.getElementById("notification");
+
+		let notificationTimeout;
+
+		const panggilAyang = () => {
+			if (notificationTimeout) return;
+			notification.classList.add("show");
+			const message = messages[current];
+			current = current + 1 == messages.length ? 0 : current + 1;
+
+			messageText.innerHTML = message;
+			notificationTimeout = setTimeout(() => {
+				notification.classList.remove("show");
+				clearTimeout(notificationTimeout);
+				notificationTimeout = null;
+			}, 3000);
+		};
+	</script>
+</html>
